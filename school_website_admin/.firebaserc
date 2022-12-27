@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "ironi-ud"
+  },
+  "targets": {
+    "ironi-ud": {
+      "hosting": {}
+    }
+  }
+}

@@ -1,0 +1,94 @@
+body { 
+    font-family: Roboto, Helvetica, Arial, sans-serif; 
+    background-image: linear-gradient(grey, lightgray, white);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mainBody {
+    width: 640px;
+    margin: 16px auto 16px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    transition-delay: 0.1s;
+    border-radius: 5px;
+    background: white;
+}
+
+#mainSection {
+    margin: 10px;
+    width: 620px;
+    display: inline-block;
+}
+
+.title {
+    background-color: #C75043;
+    padding: 16px;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font: bold 18px arial;
+}
+
+#content {
+    float:right;
+    width:620px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #5E6E0F;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.password {
+    float: right;
+    padding-top: 16px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #C75043;
+    font-weight: bold;
+  }

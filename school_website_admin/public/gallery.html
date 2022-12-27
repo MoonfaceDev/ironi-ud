@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html __expr-val-dir="rtl" lang="he-il" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>עירוני י"ד</title>
+
+    <link rel="shortcut icon" href="icon.png">
+    <link rel="stylesheet" href="css/gallery.css">
+
+    <script src="/__/firebase/7.6.1/firebase-app.js"></script>
+    <script src="/__/firebase/7.6.1/firebase-firestore.js"></script>
+    <script src="/__/firebase/7.6.1/firebase-storage.js"></script>
+    <script src="/__/firebase/7.6.1/firebase-auth.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="js/gallery.js" async></script>
+
+</head>
+
+<body>
+    <div id="mainBody">
+        <div id="rightSection">
+            <div id="mainTitle" class="title">
+                גלריה
+            </div>
+            <div id="content">
+                <table id="imageTable">
+                    <tr>
+                        <th>כותרת</th>
+                        <th>תאריך העלאה</th>
+                        <th>פעולות</th>
+                    </tr>
+                </table>
+                <button id="createButton">הוספת תמונה</button>
+            </div>
+        </div>
+        <div id="leftSection">
+            <div class="title">
+                פרטי מנהל
+            </div>
+            <div id="adminFrame">
+                <div id="name"></div>
+                <div id="emailAddress"></div>
+                <div id="status">סטטוס בטעינה...</div>
+                <button id="signOut" onclick="signOut()">התנתקות</button>
+            </div>
+        </div>
+    </div>
+    <dialog id="deleteDialog" class="modal">
+        <h3>אישור מחיקה</h3>
+        <p>האם אתה בטוח שאתה רוצה למחוק את התמונה?</p>
+        <div class="actions">
+            <button class="cancelModal">ביטול</button>
+            <button class="okModal">אישור</button>
+        </div>
+    </dialog>
+    <dialog id="editDialog" class="modal">
+        <h3>הוספת תמונה</h3>
+        <form id="editForm">
+            <div class="container">
+                <input id="title" type="text" placeholder="כותרת">
+                <input style="width: 90%;" type="file" id="imageButton" accept="image/*" multiple required>
+            </div>
+            <div class="actions">
+                <button class="cancelModal" type="button">ביטול</button>
+                <button class="okModal" type="submit">אישור</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog id="viewDialog" class="modal">
+        <h3>עריכת תמונה</h3>
+        <form id="viewForm">
+            <div class="container">
+                <input id="titleView" type="text" placeholder="כותרת">
+                <img id="imageView">
+            </div>
+            <div class="actions">
+                <button class="cancelModal" type="button">ביטול</button>
+                <button class="okModal" type="submit">אישור</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog id="loadingDialog" class="modal">
+        <div class="loader"></div>
+    </dialog>
+</body>
+
+</html>

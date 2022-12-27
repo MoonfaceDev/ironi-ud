@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "site": "ironi-ud-admin",
+    "cleanUrls": true,
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

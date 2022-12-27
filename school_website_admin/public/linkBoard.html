@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html __expr-val-dir="rtl" lang="he-il" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>עירוני י"ד</title>
+
+    <link rel="shortcut icon" href="icon.png">
+    <link rel="stylesheet" href="css/linkBoard.css">
+
+    <script src="/__/firebase/7.6.1/firebase-app.js"></script>
+    <script src="/__/firebase/7.6.1/firebase-firestore.js"></script>
+    <script src="/__/firebase/7.6.1/firebase-auth.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="js/linkBoard.js" async></script>
+
+</head>
+
+<body>
+    <div id="mainBody">
+        <div id="rightSection">
+            <div id="mainTitle" class="title">
+                לוח קישורים
+            </div>
+            <div id="content">
+                <table id="itemTable">
+                    <tr>
+                        <th>כותרת</th>
+                        <th>סוג</th>
+                        <th>פעולות</th>
+                    </tr>
+                </table>
+                <button id="createButton">יצירת קישור</button>
+            </div>
+        </div>
+        <div id="leftSection">
+            <div class="title">
+                פרטי מנהל
+            </div>
+            <div id="adminFrame">
+                <div id="name"></div>
+                <div id="emailAddress"></div>
+                <div id="status">סטטוס בטעינה...</div>
+                <button id="signOut" onclick="signOut()">התנתקות</button>
+            </div>
+        </div>
+    </div>
+    <dialog id="deleteDialog" class="modal">
+        <h3>אישור מחיקה</h3>
+        <p>האם אתה בטוח שאתה רוצה למחוק את הקישור?</p>
+        <div class="actions">
+            <button class="cancelModal">ביטול</button>
+            <button class="okModal">אישור</button>
+        </div>
+    </dialog>
+    <dialog id="editDialog" class="modal">
+        <h3>עריכת קישור</h3>
+        <form id="editForm">
+            <div class="container">
+                <input id="title" type="text" placeholder="כותרת" required>
+                <select id="type" required>
+                    <option value="single">דף יחיד</option>
+                    <option value="link">קישור</option>
+                </select>
+                <select id="page">
+
+                </select>
+                <input id="link" type="url" placeholder="קישור">
+            </div>
+            <div class="actions">
+                <button type="button" class="cancelModal">ביטול</button>
+                <button type="submit" class="okModal">אישור</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog id="loadingDialog" class="modal">
+        <div class="loader"></div>
+    </dialog>
+</body>
+
+</html>

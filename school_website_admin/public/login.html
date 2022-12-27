@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html __expr-val-dir="rtl" lang="he-il" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>עירוני י"ד</title>
+
+    <link rel="shortcut icon" href="icon.png">
+    <link rel="stylesheet" href="css/login.css">
+
+    <script src="/__/firebase/7.6.1/firebase-app.js"></script>
+    <script src="/__/firebase/7.6.1/firebase-firestore.js"></script>
+    <script src="/__/firebase/7.6.1/firebase-auth.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="js/login.js" async></script>
+
+</head>
+
+<body>
+    <div id="mainBody">
+        <div id="mainSection">
+            <div id="mainTitle" class="title">
+                כניסת משתמש
+            </div>
+            <div id="content">
+                <form id="loginForm">
+                    <div class="imgcontainer">
+                      <img src="assets/761.jpg" class="avatar">
+                    </div>
+                
+                    <div class="container">
+                      <label for="email"><b>כתובת אימייל</b></label>
+                      <input id="email" type="text" autocomplete="email" required>
+                
+                      <label for="password"><b>סיסמה</b></label>
+                      <input id="password" type="password" autocomplete="current-password" required>
+
+                      <label>
+                        <input id="remember" type="checkbox" checked="checked"> זכור אותי
+                      </label>
+
+                      <div style="margin-top: 16px;">
+                        אין לך משתמש? לחץ <a href="register.html">כאן</a> כדי להצטרף
+                      </div>
+
+                      <button id="loginButton">כניסה</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

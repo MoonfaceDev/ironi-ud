@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html __expr-val-dir="rtl" lang="he-il" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>עירוני י"ד</title>
+
+    <link rel="shortcut icon" href="../icon.png">
+    <link rel="stylesheet" href="../css/edit.css">
+
+    <script src="/__/firebase/7.6.1/firebase-app.js"></script>
+    <script src="/__/firebase/7.6.1/firebase-firestore.js"></script>
+    <script src="/__/firebase/7.6.1/firebase-auth.js"></script>
+    <script src="/__/firebase/7.6.1/firebase-storage.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/19.0.0/decoupled-document/ckeditor.js"></script> -->
+    <script src="../ckeditor5/build/ckeditor.js" type="module" onload="import('../js/edit.js');"></script>
+    <!-- <script src="https://unpkg.com/@ckeditor/ckeditor5-table@19.1.0/src/table.js?module" type="module"></script> -->
+    <!-- <script src="../@ckeditor/ckeditor5-table/src/table.js" type="module"></script> -->
+
+    <!-- <script src="../js/edit.js" async></script> -->
+
+</head>
+
+<body>
+    <div id="mainBody">
+        <div id="rightSection">
+            <div id="mainTitle" class="title">
+                עריכת דף
+            </div>
+            <div id="content">
+                <form id="editForm">
+                    <div class="container">
+                        <label for="title"><b>כותרת</b></label>
+                        <input id="title" type="text" required>
+
+                        <label for="name"><b>כתובת (באנגלית, ללא רווחים)</b></label>
+                        <input id="name" type="text" required>
+
+                        <div id="frame">
+                            <div id="toolbar"></div>
+                            <div style="height: 300px;" id="paragraph"></div>
+                        </div>
+
+                        <div><button id="createButton">פרסום</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="leftSection">
+            <div class="title">
+                פרטי מנהל
+            </div>
+            <div id="adminFrame">
+                <div id="name"></div>
+                <div id="emailAddress"></div>
+                <div id="status">סטטוס בטעינה...</div>
+                <button id="signOut" onclick="signOut()">התנתקות</button>
+            </div>
+        </div>
+    </div>
+    <dialog id="loadingDialog" class="modal">
+        <div class="loader"></div>
+    </dialog>
+</body>
+
+</html>

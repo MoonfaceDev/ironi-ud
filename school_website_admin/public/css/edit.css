@@ -1,0 +1,205 @@
+body { 
+    font-family: Roboto, Helvetica, Arial, sans-serif; 
+    background-image: linear-gradient(grey, lightgray, white);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mainBody {
+  width: 940px;
+  min-height: 480px;
+  margin: 16px auto 64px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  transition-delay: 0.1s;
+  border-radius: 5px;
+  background: white;
+}
+
+#rightSection {
+  margin: 10px;
+  width: 600px;
+  display: inline-block;
+}
+
+#leftSection {
+  margin: 10px;
+  width: 295px;
+  display: inline-block;
+}
+
+#adminFrame {
+  width: 295px;
+  height: 380px;
+  position: absolute;
+}
+
+.title {
+    background-color: #C75043;
+    padding: 16px;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font: bold 18px arial;
+}
+
+#content {
+    float:right;
+    width:600px;
+}
+
+button {
+    background-color: #5E6E0F;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.input-chosen {
+    border: 2px solid #2196f3;
+}
+
+#addObject img {
+    padding: 8px;
+    border-radius: 50%;
+    transition: 0.1s;
+}
+
+#addObject img:hover {
+    background-color: #e8e8e8;
+}
+
+#addObject img:active {
+    background-color: lightgray;
+}
+
+#paragraph {
+    border-radius: 8px;
+    border: lightgray solid 1px;
+}
+
+#toolbar {
+    border-radius: 8px;
+    border: lightgray solid 1px;
+    margin-bottom: 8px;
+}
+
+/*
+#frame > div {
+    border-radius: 8px;
+    border: lightgray solid 1px;
+    margin-bottom: 8px;
+}
+
+#frame > div > p {
+    padding: 8px;
+    margin: 0px;
+}
+
+#frame > div > img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+#frame > div > iframe {
+    border-radius: 8px;
+    width: 100%;
+    height: 300px;
+}
+
+.actions img {
+    padding: 8px;
+    border-radius: 50%;
+    transition: 0.1s;
+    width: 18px;
+    height: 18px;
+}
+
+.actions img:hover {
+    background-color: #e8e8e8;
+}
+
+.actions img:active {
+    background-color: lightgray;
+}*/
+
+#createButton {
+    width: 100px;
+}
+
+dialog {
+    text-align: center;
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.1), 0 0 10px rgba(0,0,0,0.25);
+    max-width: 90vw;
+}
+  
+dialog[open] {
+    animation: appear .15s cubic-bezier(0, 1.8, 1, 1.8);
+}
+  
+dialog::backdrop {
+    background: rgba(0,0,0,.5);
+}
+  
+dialog .actions {
+    display: flex;
+}
+
+dialog .actions button {
+    margin: 8px;
+}
+  
+@keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateX(-3rem);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #b8cc52; 
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 0.5s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html __expr-val-dir="rtl" lang="he-il" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>עירוני י"ד</title>
+
+  <link rel="shortcut icon" href="icon.png">
+  <link rel="stylesheet" href="css/index.css">
+
+  <script src="/__/firebase/7.6.1/firebase-app.js"></script>
+  <script src="/__/firebase/7.6.1/firebase-firestore.js"></script>
+  <script src="/__/firebase/7.6.1/firebase-auth.js"></script>
+  <script src="/__/firebase/init.js"></script>
+
+  <script src="js/index.js" async></script>
+
+</head>
+
+<body>
+  <div id="mainBody">
+    <div id="rightSection">
+      <div id="mainTitle" class="title">
+        ממשק מנהל
+      </div>
+      <div id="content">
+        <div class="grid-container">
+          <div class="grid-item" onclick="window.location.href='pages.html';"><img style="background-color: #42a5f5;" src="assets/edit-24px.svg"><div>דפים</div></div>
+          <div class="grid-item" onclick="window.location.href='home.html'"><img style="background-color: #ffca28;" src="assets/home-24px.svg"><div>תפריט ראשי</div></div>
+          <div class="grid-item" onclick="window.location.href='gallery.html'"><img style="background-color: #f44336;" src="assets/image-24px.svg"><div>גלריה</div></div>
+          <div class="grid-item" onclick="window.location.href='notifications.html'"><img style="background-color: #4caf50;" src="assets/notifications-24px.svg"><div>הודעות</div></div>
+          <div class="grid-item" onclick="window.location.href='linkBoard.html'"><img style="background-color: #ba68c8;" src="assets/link-24px.svg"><div>לוח קישורים</div></div>
+          <div class="grid-item" onclick="window.location.href='admins.html'"><img style="background-color: #ff7043;" src="assets/person-24px.svg"><div>מנהלים</div></div>
+        </div>
+      </div>
+    </div>
+    <div id="leftSection">
+      <div class="title">
+        פרטי מנהל
+      </div>
+      <div id="adminFrame">
+        <div id="name"></div>
+        <div id="emailAddress"></div>
+        <div id="status">סטטוס בטעינה...</div>
+        <button id="signOut" onclick="signOut()">התנתקות</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
